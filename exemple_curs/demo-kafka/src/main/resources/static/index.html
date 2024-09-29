@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafka Producer</title>
+    <script>
+        function sendMessage() {
+            const procedureId = document.getElementById("procedureId").value;
+            const procedureName = document.getElementById("procedureName").value;
+            const status = document.getElementById("status").value;
+            const timestamp = document.getElementById("timestamp").value;
+            const key = document.getElementById("key").value;
+
+            let url = `http://localhost:8081/publish?procedureId=${procedureId}&procedureName=${procedureName}&status=${status}&timestamp=${timestamp}`;
+            if (key) {
+                url += `&key=${key}`;
+            }
+
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("response").innerText = data;
+                })
+                .catch(error => {
+                    document.getElementById("response").innerText = "Error: " + error;
+                });
+        }
+
+        window.onload = function() {
+            const now = new Date();
+            const formattedDate = now.toISOString().slice(0, 16);
+            document.getElementById("timestamp").value = formattedDate;
+        }
+    </script>
+</head>
+<body>
+    <h1>Sending message to Kafka topic</h1>
+    <p>Kafka consumers will display messages confirmation in server console logs.</p>
+    <p>Fill in the form and click the button to send a message to the Kafka topic.<br><br></p>
+    <form onsubmit="event.preventDefault(); sendMessage();">
+        <label for="procedureId">Procedure ID:</label>
+        <input type="number" id="procedureId" name="procedureId" required><br><br>
+
+        <label for="procedureName">Procedure Name:</label>
+        <input type="text" id="procedureName" name="procedureName" required><br><br>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+            <option value="New">New</option>
+            <option value="Draft">Draft</option>
+        </select><br><br>
+
+        <label for="timestamp">Timestamp:</label>
+        <input type="datetime-local" id="timestamp" name="timestamp" required><br><br>
+
+        <label for="key">Key (optional):</label>
+        <input type="text" id="key" name="key"><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+    <p id="response"></p>
+</body>
+</html>

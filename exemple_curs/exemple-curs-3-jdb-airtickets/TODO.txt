@@ -1,0 +1,5 @@
+1 - Deinire interfata grafica
+2 - Implementare logica aplicatie 
+3 - Implementare acces baza de date 
+
+

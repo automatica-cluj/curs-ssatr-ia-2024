@@ -1,0 +1,11 @@
+auth:
+  type: DISABLED
+kafka:
+  clusters:
+  - bootstrapServers: 13.48.124.137:9094
+    name: test
+    properties: {}
+    readOnly: false
+rbac:
+  roles: []
+webclient: {}
