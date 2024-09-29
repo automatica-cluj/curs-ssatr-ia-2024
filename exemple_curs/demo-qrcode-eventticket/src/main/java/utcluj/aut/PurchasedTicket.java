@@ -1,4 +1,4 @@
-package utcluj.isp.curs3.simpleapps.eventticketsystem;
+package utcluj.aut;
 
 import lombok.Getter;
 import lombok.Setter;

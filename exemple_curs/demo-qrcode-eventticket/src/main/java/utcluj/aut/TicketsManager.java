@@ -1,6 +1,4 @@
-package utcluj.isp.curs3.simpleapps.eventticketsystem;
-
-import java.awt.image.BufferedImage;
+package utcluj.aut;
 
 import com.google.zxing.*;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
@@ -9,6 +7,7 @@ import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -32,7 +31,7 @@ public class TicketsManager {
         try {
             BitMatrix bitMatrix = barcodeWriter.encode(ticketOwner.toString(), BarcodeFormat.QR_CODE, 200, 200);
             BufferedImage bi =  MatrixToImageWriter.toBufferedImage(bitMatrix);
-            ImageIO.write(bi, "png", new File("C:\\Tickets2\\ticket_"+ticketOwner.getName()+".png"));
+            ImageIO.write(bi, "png", new File("ticket_"+ticketOwner.getName()+".png"));
         } catch (WriterException | IOException e) {
             throw new RuntimeException(e);
         }
