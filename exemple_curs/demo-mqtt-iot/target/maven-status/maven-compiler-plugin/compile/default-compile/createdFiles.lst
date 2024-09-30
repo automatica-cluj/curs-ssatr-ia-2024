@@ -1,0 +1,7 @@
+com\mycompany\exemple\curs\iot\mqtt\SensorUI.class
+com\mycompany\exemple\curs\iot\mqtt\ActuatorUI.class
+com\mycompany\exemple\curs\iot\mqtt\GenericController.class
+com\mycompany\exemple\curs\iot\mqtt\ActuatorUI$1.class
+com\mycompany\exemple\curs\iot\mqtt\SensorUI$1.class
+com\mycompany\exemple\curs\iot\mqtt\ExempleCursIotMqtt.class
+com\mycompany\exemple\curs\iot\mqtt\GenericMinMaxSensor.class
