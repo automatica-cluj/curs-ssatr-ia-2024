@@ -19,6 +19,8 @@ public class EventTicket {
         this.ticketType = ticketType;
         this.ticketPrice = ticketPrice;
     }
+    
+    
 
     public String toString() {
         return "Event: " + eventName + " | Date: " + eventDate + " | Ticket Type: " + ticketType + " | Price: $" + ticketPrice;
