@@ -7,7 +7,7 @@ import net.sourceforge.tess4j.TesseractException;
 
 public class OcrDemo {
     public static void main(String[] args) throws TesseractException {
-        File image = new File("nr5.jpg");
+        File image = new File("nr3.jpg");
         Tesseract tesseract = new Tesseract();
         tesseract.setDatapath("c:\\Program Files (x86)\\Tesseract-OCR\\tessdata\\");
         tesseract.setLanguage("eng");

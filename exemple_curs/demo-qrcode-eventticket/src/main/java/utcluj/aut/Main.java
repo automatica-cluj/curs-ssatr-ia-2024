@@ -18,7 +18,7 @@ public class Main {
         //validate ticket
 
         try {
-            tm.checkinTicket("ticket_Alin .png", "123");
+            tm.checkinTicket("ticket_Alin .png", "125");
             //System.out.println("QR Code data: " + qrCodeData);
         } catch (IOException | NotFoundException e) {
             e.printStackTrace();
