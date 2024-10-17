@@ -1,16 +1,16 @@
 package demo.fanout;
 import com.rabbitmq.client.*;
 
-public class FanoutConsumer {
+public class FanoutConsumer2 {
     private static final String EXCHANGE_NAME = "fanout_exchange";
 
     public static void main(String[] argv) throws Exception {
-        if (argv.length < 1) {
-            System.err.println("Usage: FanoutConsumer <queue_name>");
-            System.exit(1);
-        }
+//        if (argv.length < 1) {
+//            System.err.println("Usage: FanoutConsumer <queue_name>");
+//            System.exit(1);
+//        }
 
-        String queueName = argv[0]; // Queue name is passed as a parameter
+        String queueName = "demo_ssatr1"; // Queue name is passed as a parameter
 
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
@@ -36,7 +36,6 @@ public class FanoutConsumer {
 
         // Start consuming messages
         channel.basicConsume(queueName, true, deliverCallback, consumerTag -> { });
-
     }
 }
 

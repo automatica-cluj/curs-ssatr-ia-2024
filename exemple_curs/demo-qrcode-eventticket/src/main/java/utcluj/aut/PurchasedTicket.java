@@ -11,6 +11,7 @@ public class PurchasedTicket {
     private String phoneNumber;
     private EventTicket eventTicket;
     private String purchaseDate;
+    private String cnp;
 
     public PurchasedTicket(String name, String email, String phoneNumber, EventTicket eventTicket, String purchaseDate) {
         this.name = name;
