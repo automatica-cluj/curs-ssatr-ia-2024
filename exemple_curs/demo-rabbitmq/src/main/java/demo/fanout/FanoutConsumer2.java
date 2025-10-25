@@ -10,7 +10,7 @@ public class FanoutConsumer2 {
 //            System.exit(1);
 //        }
 
-        String queueName = "demo_ssatr1"; // Queue name is passed as a parameter
+        String queueName = "demo_ssatr2"; // Queue name is passed as a parameter
 
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");

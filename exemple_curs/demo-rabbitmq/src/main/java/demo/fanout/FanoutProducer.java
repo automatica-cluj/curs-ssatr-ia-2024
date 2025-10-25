@@ -33,16 +33,21 @@ public class FanoutProducer {
 
             // Parse JSON and update the timestamp
             ObjectMapper objectMapper = new ObjectMapper();
-            Map<String, Object> jsonMap = objectMapper.readValue(jsonData, HashMap.class);
-            jsonMap.put("timestamp", Instant.now().toString());
-
-            // Convert the map back to JSON string
-            String updatedJsonContent = objectMapper.writeValueAsString(jsonMap);
 
             // Publish the updated JSON content to the fanout exchange
-            channel.basicPublish(exchangeName, "", MessageProperties.PERSISTENT_TEXT_PLAIN, updatedJsonContent.getBytes("UTF-8"));
+            for(int i=0;i<100;i++) {
+                Map<String, Object> jsonMap = objectMapper.readValue(jsonData, HashMap.class);
+                jsonMap.put("timestamp", Instant.now().toString());
+                // append +i to procedureName
+                Object procObj = jsonMap.get("procedureName");
+                String procName = procObj == null ? "" : procObj.toString();
+                jsonMap.put("procedureName", procName + "+" + i);
+                String updatedJsonContent = objectMapper.writeValueAsString(jsonMap);
+                channel.basicPublish(exchangeName, "", MessageProperties.PERSISTENT_TEXT_PLAIN, updatedJsonContent.getBytes("UTF-8"));
+                Thread.sleep(1000);
+                System.out.println(" [x] Sent updated JSON to exchange: " + updatedJsonContent);
+            }
 
-            System.out.println(" [x] Sent updated JSON to exchange: " + updatedJsonContent);
         }
     }
 }
