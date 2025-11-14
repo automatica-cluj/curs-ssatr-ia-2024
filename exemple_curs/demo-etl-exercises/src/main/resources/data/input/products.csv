@@ -1,0 +1,16 @@
+product_id,product_name,category,stock_quantity,supplier,reorder_level
+P001,Laptop,Electronics,45,TechSupply Inc,10
+P002,Mouse,Electronics,150,TechSupply Inc,30
+P003,Keyboard,Electronics,80,TechSupply Inc,20
+P004,Monitor,Electronics,60,TechSupply Inc,15
+P005,Desk Chair,Furniture,25,Office Furniture Co,5
+P006,Standing Desk,Furniture,15,Office Furniture Co,3
+P007,Webcam,Electronics,70,TechSupply Inc,15
+P008,Headphones,Electronics,90,TechSupply Inc,20
+P009,Notebook,Office Supplies,500,Paper Goods Ltd,100
+P010,USB Cable,Electronics,200,TechSupply Inc,50
+P011,Desk Lamp,Furniture,40,Office Furniture Co,10
+P012,Phone Case,Accessories,120,Mobile Accessories LLC,25
+P013,Backpack,Accessories,55,Travel Gear Inc,15
+P014,Water Bottle,Accessories,180,Eco Products Ltd,40
+P015,Pen Set,Office Supplies,300,Paper Goods Ltd,60

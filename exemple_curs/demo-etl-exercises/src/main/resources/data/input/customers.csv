@@ -1,0 +1,11 @@
+id,name,email,age,city,country,registration_date
+1,John Smith,john.smith@email.com,28,New York,USA,2023-01-15
+2,Maria Garcia,maria.garcia@email.com,34,Barcelona,Spain,2023-02-20
+3,Li Wei,li.wei@email.com,25,Beijing,China,2023-01-10
+4,Anna Mueller,anna.mueller@email.com,42,Berlin,Germany,2023-03-05
+5,Ahmed Hassan,ahmed.hassan@email.com,31,Cairo,Egypt,2023-02-14
+6,Sarah Johnson,sarah.j@email.com,29,London,UK,2023-01-25
+7,Carlos Silva,carlos.silva@email.com,38,Sao Paulo,Brazil,2023-03-12
+8,Yuki Tanaka,yuki.tanaka@email.com,27,Tokyo,Japan,2023-02-08
+9,Emma Wilson,emma.wilson@email.com,33,Sydney,Australia,2023-01-30
+10,Pierre Dubois,pierre.dubois@email.com,45,Paris,France,2023-03-01

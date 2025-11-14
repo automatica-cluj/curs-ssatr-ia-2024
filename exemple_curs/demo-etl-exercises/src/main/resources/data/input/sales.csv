@@ -1,0 +1,16 @@
+sale_id,customer_id,product_name,quantity,unit_price,sale_date,category
+1001,1,Laptop,1,899.99,2023-04-01,Electronics
+1002,2,Mouse,2,24.99,2023-04-02,Electronics
+1003,1,Keyboard,1,79.99,2023-04-02,Electronics
+1004,3,Monitor,1,299.99,2023-04-03,Electronics
+1005,4,Desk Chair,1,189.99,2023-04-03,Furniture
+1006,5,Standing Desk,1,399.99,2023-04-04,Furniture
+1007,2,Webcam,1,89.99,2023-04-05,Electronics
+1008,6,Headphones,1,149.99,2023-04-05,Electronics
+1009,3,Notebook,5,4.99,2023-04-06,Office Supplies
+1010,7,USB Cable,3,9.99,2023-04-06,Electronics
+1011,8,Desk Lamp,1,45.99,2023-04-07,Furniture
+1012,1,Phone Case,2,19.99,2023-04-08,Accessories
+1013,9,Backpack,1,59.99,2023-04-09,Accessories
+1014,10,Water Bottle,2,14.99,2023-04-10,Accessories
+1015,4,Pen Set,1,12.99,2023-04-11,Office Supplies
